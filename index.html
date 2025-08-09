@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capology</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--
+
+TemplateMo 595 3d coverflow
+
+https://templatemo.com/tm-595-3d-coverflow
+
+-->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <a href="#home" class="logo-container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Capology Logo" width="190px" />
+        </div>
+        <!-- <div class="logo-text">Capology</div> -->
+      </a>
+
+      <nav class="main-menu" id="mainMenu">
+        <a href="#home" class="menu-item active">Home</a>
+        <a href="#products" class="menu-item">products</a>
+        <a href="#contact" class="menu-item">Contact</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="coverflow-wrapper">
+        <div class="info">
+          <h2 id="current-title">Mountain Landscape</h2>
+          <p id="current-description">
+            Majestic peaks covered in snow during golden hour
+          </p>
+        </div>
+
+        <div class="coverflow-container" tabindex="0">
+          <div class="coverflow" id="coverflow">
+            <div class="coverflow-item" data-index="0">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 1.webp"
+                  alt="Page Cap"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="1">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 3.webp"
+                  alt="Forest Path"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="2">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 6.webp"
+                  alt="Lake Reflection"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="3">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 10.webp"
+                  alt="Ocean Sunset"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="4">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 17.webp"
+                  alt="Desert Dunes"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="5">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 19.webp"
+                  alt="Starry Night"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="6">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 23.webp"
+                  alt="Waterfall"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="7">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 8.webp"
+                  alt="Waterfall"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="8">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output-27.webp"
+                  alt="Waterfall"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+            <div class="coverflow-item" data-index="9">
+              <div class="cover image-loading">
+                <img
+                  src="images/slider/photo-output 33.webp"
+                  alt="Waterfall"
+                  loading="lazy"
+                />
+              </div>
+              <div class="reflection"></div>
+            </div>
+          </div>
+
+          <button class="nav-button prev" onclick="navigate(-1)">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="nav-button next" onclick="navigate(1)">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="dots-container" id="dots"></div>
+
+          <!-- Play/Pause Button -->
+          <button
+            class="play-pause-button"
+            id="playPauseBtn"
+            onclick="toggleAutoplay()"
+          >
+            <span class="play-icon">▶</span>
+            <span class="pause-icon" style="display: none">❚❚</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+      <div class="sliders-container">
+        <!-- سلايدر 1 -->
+        <div class="product-card" data-color="beige">
+          <div class="slider">
+            <div class="slides">
+              <img
+                src="images/capes/photo-output 1.webp"
+                loading="lazy"
+                onclick="openPopup(this)"
+              />
+              <img
+                src="images/capes/photo-output 2.webp"
+                loading=""
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: beige</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+        <div id="imagePopup" class="popup">
+          <span class="close" onclick="closePopup()"
+            ><i class="fa-solid fa-circle-xmark text-light"></i
+          ></span>
+          <img class="popup-content" id="popupImage" />
+        </div>
+
+        <!-- سلايدر 2 -->
+        <div class="product-card" data-color="Vintage Black">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 3.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 4.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: Vintage Black</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 3 -->
+        <div class="product-card" data-color="purple">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 5.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 6.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: purple</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 4 -->
+        <div class="product-card" data-color="Cream Berry">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 7.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 8.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 9.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: Cream Berry</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 5 -->
+        <div class="product-card" data-color="white">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 10.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 11.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: white</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 6 -->
+        <div class="product-card" data-color="Off-White">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 15.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 16.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 17.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: Off-White</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 7 -->
+        <div class="product-card" data-color="gray">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 18.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 19.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 20.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: gray</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 8 -->
+        <div class="product-card" data-color="navy blue">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 21.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 22.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 23.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: navy blue</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 9 -->
+        <div class="product-card" data-color="black">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 24.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 25.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 26.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: black</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 10 -->
+        <div class="product-card" data-color="light blue">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 27.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 28.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 29.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: light blue</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+
+        <!-- سلايدر 11 -->
+        <div class="product-card" data-color="red">
+          <div class="slider">
+            <div class="slides">
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 31.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 32.webp"
+                onclick="openPopup(this)"
+              />
+              <img
+                loading="ladzy"
+                src="images/capes/photo-output 33.webp"
+                onclick="openPopup(this)"
+              />
+            </div>
+          </div>
+          <div class="card-details">
+            <div class="product-name">GHSF Cap</div>
+            <div class="color-title">Color: red</div>
+          </div>
+          <div class="nav-buttons">
+            <button onclick="prevSlide(this)">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="nextSlide(this)">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="price">
+            <span>450 EGP</span>
+          </div>
+          <button class="whatsapp-btn">Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- first banner -->
+    <section id="first-banner">
+      <div>
+        <img src="images/Banner.webp" alt="first banner" width="100%" />
+      </div>
+    </section>
+
+    <section class="tp-feature-area s-block">
+      <div class="container">
+        <div class="tp-feature-items">
+          <div class="feature-box">
+            <div class="icon">
+              <img
+                loading="lazy"
+                width="60"
+                height="60"
+                class="lazy-img"
+                src="https://media.zid.store/a921f72c-d33c-474e-a628-7da31edb6db6/da48c370-490e-4c46-9b31-23ab6ae2b794.gif"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <h3 class="title">توصيل سريع وآمن</h3>
+              <p>بسرعة، أمان، ثقة</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="icon">
+              <img
+                loading="lazy"
+                width="60"
+                height="60"
+                class="lazy-img"
+                src="https://media.zid.store/a921f72c-d33c-474e-a628-7da31edb6db6/cbfa3dbc-563f-4050-b7e6-b1a55bfc25d5.gif"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <h3 class="title">دعم احترافي بجودة عالية</h3>
+              <p>دعم مباشر</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="icon">
+              <img
+                loading="lazy"
+                width="60"
+                height="60"
+                class="lazy-img"
+                src="https://media.zid.store/a921f72c-d33c-474e-a628-7da31edb6db6/2a52f6f3-d548-4cdd-b5e4-89592e5007b7.gif"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <h3 class="title">جودة عالية</h3>
+              <p>اجود انواع الاقمشة</p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="icon">
+              <img
+                loading="lazy"
+                width="60"
+                height="60"
+                class="lazy-img"
+                src="https://media.zid.store/a921f72c-d33c-474e-a628-7da31edb6db6/52b1a46f-1256-4d1b-94e0-1ae382300765.gif"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <h3 class="title">تغليف مميز</h3>
+              <p>مناسب للاهداء</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- second banner -->
+    <section id="second-banner">
+      <div>
+        <img src="images/Banner-2.png" alt="" width="100%" />
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="contact-content">
+        <div class="contact-header">
+          <h2>Order & Contact</h2>
+          <p>
+            Got your eye on a cap? Contact us or order instantly via
+            <span class="text-success">WhatsApp</span>.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info-section">
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>alielgareb30@gmail.com</p>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/+201122543820"
+                class="text-decoration-none"
+                target="_blank"
+              >
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="contact-text">
+                    <h4>Whatsapp</h4>
+                    <p>+201122543820</p>
+                  </div>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Business Hours</h4>
+                  <p>24/7</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <h4>Follow Us</h4>
+              <div class="social-buttons">
+                <a
+                  href="https://www.instagram.com/capoligy/profilecard/?igsh=MXd6dnpmcGowZzVqeg=="
+                  class="social-btn"
+                  title="Instagram"
+                >
+                  <i class="fa-brands fa-instagram text-light"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-section">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="Phone">Phone Number</label>
+                <input type="tel" id="Phone" name="Phone" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="beige">Beige</option>
+                  <option value="vintage-black">Vintage Black</option>
+                  <option value="purple">Purple</option>
+                  <option value="cream-berry">Cream Berry</option>
+                  <option value="white">White</option>
+                  <option value="off-white">Off-White</option>
+                  <option value="gray">Gray</option>
+                  <option value="navy-blue">Navy Blue</option>
+                  <option value="black">Black</option>
+                  <option value="light-blue">Light Blue</option>
+                  <option value="red">Red</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">order now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content justify-content-center">
+        <div class="footer-copyright">
+          © 2025 3D Coverflow. All rights reserved. | Designed by
+          <a
+            href="https://wa.me/+201120462152"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mostafa Diab</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+      <span>↑</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
